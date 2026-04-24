@@ -1,4 +1,4 @@
 #!/bin/bash
-cd /root/klod
+cd /home/bot/claude-bot
 git pull origin claude/complete-vps-setup-GckMu
-pm2 restart klod-bot
+systemctl restart claude-bot

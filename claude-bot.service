@@ -1,0 +1,15 @@
+[Unit]
+Description=Claude AI Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=bot
+WorkingDirectory=/home/bot/claude-bot
+ExecStart=/usr/bin/python3 /home/bot/claude-bot/agent_bot.py
+Restart=always
+RestartSec=5
+EnvironmentFile=/home/bot/claude-bot/.env
+
+[Install]
+WantedBy=multi-user.target
